@@ -1,6 +1,6 @@
 # sitoeleverricardo
 
-Workspace **ricardoelever** (file `cbnet/ricardoelever.code-workspace`).
+Workspace **ricardoelever** (`ricardoelever.code-workspace` in root di questo repo).
 
 | Cartella | Repository |
 |----------|------------|

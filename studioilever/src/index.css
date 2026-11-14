@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --color-ivory: #f7f4ef;
+  --color-ink: #15201c;
+  --color-muted: #5c6b65;
+  --color-sage: #2f5d52;
+  --color-sage-light: #3d7567;
+  --color-sand: #d9c4a8;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-ivory text-ink font-sans antialiased;
+  margin: 0;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  z-index: 100;
+  border-radius: 0.5rem;
+  background: #fff;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-sage);
+  box-shadow: 0 10px 25px rgb(0 0 0 / 0.12);
+}
+
+.skip-link:focus {
+  left: 0.75rem;
+  top: calc(0.75rem + env(safe-area-inset-top));
+}
+
+mark {
+  background: linear-gradient(180deg, transparent 55%, color-mix(in oklab, var(--color-sand) 55%, transparent) 55%);
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-img {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+    transition:
+      opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal-img.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
