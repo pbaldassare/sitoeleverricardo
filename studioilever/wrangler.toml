@@ -1,0 +1,4 @@
+# Usare con Cloudflare Pages: Root directory = studioilever
+name = "studioilever"
+compatibility_date = "2024-08-01"
+pages_build_output_dir = "./dist"
