@@ -1,0 +1,4 @@
+# Cloudflare Pages (build da root; output Vite in sottocartella)
+name = "studioilever"
+compatibility_date = "2024-08-01"
+pages_build_output_dir = "studioilever/dist"

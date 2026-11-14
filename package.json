@@ -1,0 +1,10 @@
+{
+  "name": "sitoeleverricardo",
+  "private": true,
+  "scripts": {
+    "build": "npm ci --prefix studioilever && npm run build --prefix studioilever"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
