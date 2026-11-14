@@ -11,9 +11,14 @@ Questo repo contiene metadati del workspace; il codice CBnet resta nel repo `cbn
 
 ### Cloudflare Pages
 
+Deploy **`main`**, commit **`3f3c1e9` o successivi** (prima mancava `package.json` in root).
+
 | Campo | Valore |
 |-------|--------|
+| Production branch | `main` (non un commit fisso) |
 | Build command | `npm run build` |
 | Build output | `studioilever/dist` (anche in `wrangler.toml`) |
-| Root directory | `/` (repo root) |
-| Node | ≥ 20 |
+| Root directory | *(vuoto = root del repo)* |
+| Node | 20 (`.nvmrc`) |
+
+Dopo un push, in **Deployments** deve comparire l’hash nuovo (es. `3f3c1e9…`). Se vedi ancora `3dbe70b`, **Retry** non basta: abilita deploy automatico su `main` o lancia **Create deployment** su HEAD.
